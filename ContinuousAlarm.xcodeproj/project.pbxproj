@@ -10,6 +10,14 @@
 		3763E9F2B8FCF7F9BFB67551 /* Pods_ContinuousAlarm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB63DDF3A2827C3E0CB91EE2 /* Pods_ContinuousAlarm.framework */; };
 		D81A1B6628D58E3B005E2BFA /* VFContinuousAlarmSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81A1B6528D58E3B005E2BFA /* VFContinuousAlarmSettingsViewController.m */; };
 		D81A1B6E28D5C88D005E2BFA /* VFCAToast.m in Sources */ = {isa = PBXBuildFile; fileRef = D81A1B6D28D5C88D005E2BFA /* VFCAToast.m */; };
+		D81A1B7828D63673005E2BFA /* AlarmModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = D81A1B7528D63673005E2BFA /* AlarmModel+CoreDataProperties.m */; };
+		D81A1B7928D63673005E2BFA /* AlarmModel+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D81A1B7728D63673005E2BFA /* AlarmModel+CoreDataClass.m */; };
+		D81A1B8128D637A3005E2BFA /* VFCACoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D81A1B8028D637A3005E2BFA /* VFCACoreDataManager.m */; };
+		D81A1B8928D63B7D005E2BFA /* VFContinuousAlarmModelDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = D81A1B8828D63B7D005E2BFA /* VFContinuousAlarmModelDAO.m */; };
+		D81A1B8C28D63F31005E2BFA /* VFContinuousAlarmModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = D81A1B7328D630D6005E2BFA /* VFContinuousAlarmModel.xcdatamodeld */; };
+		D81A1B9128D8D23F005E2BFA /* VFContinuousAlarmConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D81A1B9028D8D23F005E2BFA /* VFContinuousAlarmConfig.m */; };
+		D81A1B9628D8D5F8005E2BFA /* VFContinuousAlarmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D81A1B9528D8D5F8005E2BFA /* VFContinuousAlarmTableViewCell.m */; };
+		D81A1B9B28D8D9B2005E2BFA /* VFCANotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D81A1B9A28D8D9B2005E2BFA /* VFCANotificationManager.m */; };
 		D869CD6C28D4F2ED0006F7B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D869CD6B28D4F2ED0006F7B8 /* AppDelegate.m */; };
 		D869CD6F28D4F2ED0006F7B8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D869CD6E28D4F2ED0006F7B8 /* SceneDelegate.m */; };
 		D869CD7728D4F2EE0006F7B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D869CD7628D4F2EE0006F7B8 /* Assets.xcassets */; };
@@ -24,6 +32,21 @@
 		D81A1B6528D58E3B005E2BFA /* VFContinuousAlarmSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VFContinuousAlarmSettingsViewController.m; sourceTree = "<group>"; };
 		D81A1B6C28D5C88D005E2BFA /* VFCAToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VFCAToast.h; sourceTree = "<group>"; };
 		D81A1B6D28D5C88D005E2BFA /* VFCAToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VFCAToast.m; sourceTree = "<group>"; };
+		D81A1B7228D630D6005E2BFA /* VFContinuousAlarmModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VFContinuousAlarmModel.xcdatamodel; sourceTree = "<group>"; };
+		D81A1B7428D63673005E2BFA /* AlarmModel+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AlarmModel+CoreDataClass.h"; path = "/Users/vegetablefriend/Desktop/ContinuousAlarm/ContinuousAlarm/Alarm/AlarmModel+CoreDataClass.h"; sourceTree = "<absolute>"; };
+		D81A1B7528D63673005E2BFA /* AlarmModel+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AlarmModel+CoreDataProperties.m"; path = "/Users/vegetablefriend/Desktop/ContinuousAlarm/ContinuousAlarm/Alarm/AlarmModel+CoreDataProperties.m"; sourceTree = "<absolute>"; };
+		D81A1B7628D63673005E2BFA /* AlarmModel+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AlarmModel+CoreDataProperties.h"; path = "/Users/vegetablefriend/Desktop/ContinuousAlarm/ContinuousAlarm/Alarm/AlarmModel+CoreDataProperties.h"; sourceTree = "<absolute>"; };
+		D81A1B7728D63673005E2BFA /* AlarmModel+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AlarmModel+CoreDataClass.m"; path = "/Users/vegetablefriend/Desktop/ContinuousAlarm/ContinuousAlarm/Alarm/AlarmModel+CoreDataClass.m"; sourceTree = "<absolute>"; };
+		D81A1B7F28D637A3005E2BFA /* VFCACoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VFCACoreDataManager.h; sourceTree = "<group>"; };
+		D81A1B8028D637A3005E2BFA /* VFCACoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VFCACoreDataManager.m; sourceTree = "<group>"; };
+		D81A1B8728D63B7D005E2BFA /* VFContinuousAlarmModelDAO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VFContinuousAlarmModelDAO.h; sourceTree = "<group>"; };
+		D81A1B8828D63B7D005E2BFA /* VFContinuousAlarmModelDAO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VFContinuousAlarmModelDAO.m; sourceTree = "<group>"; };
+		D81A1B8F28D8D23F005E2BFA /* VFContinuousAlarmConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VFContinuousAlarmConfig.h; sourceTree = "<group>"; };
+		D81A1B9028D8D23F005E2BFA /* VFContinuousAlarmConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VFContinuousAlarmConfig.m; sourceTree = "<group>"; };
+		D81A1B9428D8D5F8005E2BFA /* VFContinuousAlarmTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VFContinuousAlarmTableViewCell.h; sourceTree = "<group>"; };
+		D81A1B9528D8D5F8005E2BFA /* VFContinuousAlarmTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VFContinuousAlarmTableViewCell.m; sourceTree = "<group>"; };
+		D81A1B9928D8D9B2005E2BFA /* VFCANotificationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VFCANotificationManager.h; sourceTree = "<group>"; };
+		D81A1B9A28D8D9B2005E2BFA /* VFCANotificationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VFCANotificationManager.m; sourceTree = "<group>"; };
 		D869CD6728D4F2ED0006F7B8 /* ContinuousAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContinuousAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D869CD6A28D4F2ED0006F7B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D869CD6B28D4F2ED0006F7B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,6 +100,53 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		D81A1B7E28D63783005E2BFA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D81A1B7F28D637A3005E2BFA /* VFCACoreDataManager.h */,
+				D81A1B8028D637A3005E2BFA /* VFCACoreDataManager.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D81A1B8528D63B5C005E2BFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D81A1B7628D63673005E2BFA /* AlarmModel+CoreDataProperties.h */,
+				D81A1B7428D63673005E2BFA /* AlarmModel+CoreDataClass.h */,
+				D81A1B7728D63673005E2BFA /* AlarmModel+CoreDataClass.m */,
+				D81A1B7528D63673005E2BFA /* AlarmModel+CoreDataProperties.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D81A1B8628D63B66005E2BFA /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				D81A1B8728D63B7D005E2BFA /* VFContinuousAlarmModelDAO.h */,
+				D81A1B8828D63B7D005E2BFA /* VFContinuousAlarmModelDAO.m */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		D81A1B8E28D8D22F005E2BFA /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D81A1B8F28D8D23F005E2BFA /* VFContinuousAlarmConfig.h */,
+				D81A1B9028D8D23F005E2BFA /* VFContinuousAlarmConfig.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		D81A1B9828D8D99F005E2BFA /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				D81A1B9928D8D9B2005E2BFA /* VFCANotificationManager.h */,
+				D81A1B9A28D8D9B2005E2BFA /* VFCANotificationManager.m */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		D869CD5E28D4F2ED0006F7B8 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +168,10 @@
 		D869CD6928D4F2ED0006F7B8 /* ContinuousAlarm */ = {
 			isa = PBXGroup;
 			children = (
+				D81A1B9828D8D99F005E2BFA /* Notification */,
+				D81A1B8E28D8D22F005E2BFA /* Config */,
+				D81A1B7328D630D6005E2BFA /* VFContinuousAlarmModel.xcdatamodeld */,
+				D81A1B7E28D63783005E2BFA /* CoreData */,
 				D81A1B6A28D5C4B7005E2BFA /* Components */,
 				D869CD8628D4F36C0006F7B8 /* Alarm */,
 				D869CD6A28D4F2ED0006F7B8 /* AppDelegate.h */,
@@ -115,10 +189,14 @@
 		D869CD8628D4F36C0006F7B8 /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				D81A1B8628D63B66005E2BFA /* DAO */,
+				D81A1B8528D63B5C005E2BFA /* Model */,
 				D869CD8728D4F38D0006F7B8 /* VFContinuousAlarmMainViewController.h */,
 				D869CD8828D4F38D0006F7B8 /* VFContinuousAlarmMainViewController.m */,
 				D81A1B6428D58E3B005E2BFA /* VFContinuousAlarmSettingsViewController.h */,
 				D81A1B6528D58E3B005E2BFA /* VFContinuousAlarmSettingsViewController.m */,
+				D81A1B9428D8D5F8005E2BFA /* VFContinuousAlarmTableViewCell.h */,
+				D81A1B9528D8D5F8005E2BFA /* VFContinuousAlarmTableViewCell.m */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -181,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D81A1B8C28D63F31005E2BFA /* VFContinuousAlarmModel.xcdatamodeld in Resources */,
 				D869CD7A28D4F2EE0006F7B8 /* LaunchScreen.storyboard in Resources */,
 				D869CD7728D4F2EE0006F7B8 /* Assets.xcassets in Resources */,
 			);
@@ -235,12 +314,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D81A1B9628D8D5F8005E2BFA /* VFContinuousAlarmTableViewCell.m in Sources */,
 				D869CD6C28D4F2ED0006F7B8 /* AppDelegate.m in Sources */,
 				D81A1B6628D58E3B005E2BFA /* VFContinuousAlarmSettingsViewController.m in Sources */,
 				D869CD7D28D4F2EE0006F7B8 /* main.m in Sources */,
+				D81A1B9B28D8D9B2005E2BFA /* VFCANotificationManager.m in Sources */,
+				D81A1B8928D63B7D005E2BFA /* VFContinuousAlarmModelDAO.m in Sources */,
+				D81A1B7828D63673005E2BFA /* AlarmModel+CoreDataProperties.m in Sources */,
 				D81A1B6E28D5C88D005E2BFA /* VFCAToast.m in Sources */,
 				D869CD6F28D4F2ED0006F7B8 /* SceneDelegate.m in Sources */,
+				D81A1B9128D8D23F005E2BFA /* VFContinuousAlarmConfig.m in Sources */,
 				D869CD8928D4F38D0006F7B8 /* VFContinuousAlarmMainViewController.m in Sources */,
+				D81A1B8128D637A3005E2BFA /* VFCACoreDataManager.m in Sources */,
+				D81A1B7928D63673005E2BFA /* AlarmModel+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +516,18 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D81A1B7328D630D6005E2BFA /* VFContinuousAlarmModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D81A1B7228D630D6005E2BFA /* VFContinuousAlarmModel.xcdatamodel */,
+			);
+			currentVersion = D81A1B7228D630D6005E2BFA /* VFContinuousAlarmModel.xcdatamodel */;
+			path = VFContinuousAlarmModel.xcdatamodeld;
+			sourceTree = "<group>";
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D869CD5F28D4F2ED0006F7B8 /* Project object */;
 }

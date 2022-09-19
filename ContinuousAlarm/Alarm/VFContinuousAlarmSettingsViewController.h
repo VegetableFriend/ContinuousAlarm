@@ -9,7 +9,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class VFContinuousAlarmSettingsViewController;
+
+@protocol VFContinuousAlarmSettingsDelegate <NSObject>
+
+- (void)addAlarm:(AlarmModel *)model settingsViewController:(VFContinuousAlarmSettingsViewController *)settingsViewController;
+
+@end
+
 @interface VFContinuousAlarmSettingsViewController : UIViewController
+
+@property (nonatomic, weak) id<VFContinuousAlarmSettingsDelegate> delegate;
 
 @end
 

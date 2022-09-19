@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VFCAToast : UIView
 
-+ (void)showToastWithTips:(NSString *)tips completion:(dispatch_block_t)completion;
++ (void)showToastWithTips:(NSString *)tips completion:(nullable dispatch_block_t)completion;
 
 @end
 

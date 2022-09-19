@@ -5,8 +5,13 @@
 //  Created by HaopengLi on 9/17/22.
 //
 
-#import "VFContinuousAlarmSettingsViewController.h"
 #import "VFCAToast.h"
+#import "AlarmModel+CoreDataClass.h"
+#import "VFCANotificationManager.h"
+#import "VFCACoreDataManager.h"
+#import "VFContinuousAlarmSettingsViewController.h"
+#import "VFContinuousAlarmModelDAO.h"
+#import "VFContinuousAlarmConfig.h"
 
 @import UserNotifications;
 @import Masonry;
@@ -110,7 +115,7 @@ static const CGFloat kVFCAAlarmSettingsPanelHeight = 350;
 - (void)submitAlarm:(id)sender {
     NSDate *pickedDate = self.datePicker.date;
     if (pickedDate < [NSDate date]) {
-        
+        [VFCAToast showToastWithTips:@"Picked time must larger than current time!" completion:nil];
     } else {
         UNAuthorizationOptions options =
         UNAuthorizationOptionSound |
@@ -128,22 +133,32 @@ static const CGFloat kVFCAAlarmSettingsPanelHeight = 350;
 }
 
 - (void)addAlarmIntoSystem {
-    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-    UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
-    content.title = @"Wake up!";
-    content.body = @"Wake up BRO!";
-    content.sound = [UNNotificationSound defaultSound];
-    content.badge = @1;
-    UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:60 repeats:YES];
-        
-    NSString *identifier = @"noticeId";
-    UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:identifier
-                                                                          content:content
-                                                                          trigger:trigger];
-         
-    [center addNotificationRequest:request withCompletionHandler:^(NSError *error) {
-        [VFCAToast showToastWithTips:@"Add alarm successfully" completion:nil];
+    [VFCANotificationManager addLocalNotificationWithIdentifier:[self alarmPushIdentifier] completion:^(BOOL success) {
+        if (success) {
+            [VFCAToast showToastWithTips:@"Add alarm successfully" completion:nil];
+            [self saveAlarmModelIntoLocal];
+        } else {
+            [VFCAToast showToastWithTips:@"Add alarm failed" completion:nil];
+        }
     }];
+}
+
+- (void)saveAlarmModelIntoLocal {
+    AlarmModel *model = [[AlarmModel alloc] initWithContext:[VFCACoreDataManager sharedInstance].container.viewContext];
+    model.identifier = [self alarmPushIdentifier];
+    model.time = self.datePicker.date;
+    model.aid = [VFContinuousAlarmConfig currentAlarmCount];
+    
+    [VFContinuousAlarmModelDAO saveAlarmModel:model];
+    [VFContinuousAlarmConfig increaseCurrentAlarmCount];
+    [self.delegate addAlarm:model settingsViewController:self];
+}
+
+- (NSString *)alarmPushIdentifier {
+    NSString *dateString = self.datePicker.date.description;
+    NSUInteger currentAlarmCount = [VFContinuousAlarmConfig currentAlarmCount];
+    
+    return [NSString stringWithFormat:@"%@_%@", @(currentAlarmCount).stringValue, dateString];
 }
 
 #pragma mark - accessor

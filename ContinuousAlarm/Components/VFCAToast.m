@@ -11,7 +11,7 @@
 
 @implementation VFCAToast
 
-+ (void)showToastWithTips:(NSString *)tips completion:(dispatch_block_t)completion {
++ (void)showToastWithTips:(NSString *)tips completion:(nullable dispatch_block_t)completion {
     dispatch_async(dispatch_get_main_queue(), ^{
         UIWindow *window = [self currentWindow];
         UIView *toast = [self generateToastView];

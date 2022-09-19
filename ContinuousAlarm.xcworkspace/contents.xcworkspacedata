@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/vegetablefriend/Desktop/ContinuousAlarm/ContinuousAlarm/Alarm/AlarmModel+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/vegetablefriend/Desktop/ContinuousAlarm/ContinuousAlarm/Alarm/AlarmModel+CoreDataClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/vegetablefriend/Desktop/ContinuousAlarm/ContinuousAlarm/Alarm/AlarmModel+CoreDataClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/vegetablefriend/Desktop/ContinuousAlarm/ContinuousAlarm/Alarm/AlarmModel+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
       location = "group:ContinuousAlarm.xcodeproj">
    </FileRef>
    <FileRef
